@@ -1,5 +1,5 @@
-import UserList from "./features/users/UserList";
 import { Routes, Route } from "react-router-dom";
+import UserList from "./features/users/UserList";
 import AddUser from "./features/users/AddUser";
 import EditUser from "./features/users/EditUser";
 
