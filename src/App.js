@@ -1,4 +1,5 @@
 import UserList from "./features/users/UserList";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -6,7 +7,9 @@ function App() {
       <h1 className="text-center font-bold text-2xl text-gray-700">
         BLOG app (CRUD) with redux toolkit
       </h1>
-      <UserList />
+      <Routes>
+        <Route path="/" element={<UserList />} />
+      </Routes>
     </div>
   );
 }
