@@ -1,19 +1,22 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import TextField from "./../../components/TextField";
 import Button from "../../components/Button";
+import TextField from "../../components/TextField";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
-const AddUser = () => {
+const EditUser = () => {
   const navigate = useNavigate();
+
   const [values, setValues] = useState({
     name: "",
     email: "",
   });
 
-  const handleAddUser = () => {
+  const handleEditUser = () => {
     setValues({ name: "", email: "" });
+
     navigate("/");
   };
+
   return (
     <div className="mt-10 max-w-xl mx-auto">
       <TextField
@@ -29,9 +32,9 @@ const AddUser = () => {
         onChange={(e) => setValues({ ...values, email: e.target.value })}
         inputProps={{ type: "email", placeholder: "Enter Your Email" }}
       />
-      <Button onClick={handleAddUser}>Submit</Button>
+      <Button onClick={handleEditUser}>Edit</Button>
     </div>
   );
 };
 
-export default AddUser;
+export default EditUser;
